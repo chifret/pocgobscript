@@ -42,14 +42,9 @@
             <div class="col-md-12">
                 <div #mainContainer id="mainContainer" class="form-control"
                      style="height:400px; overflow-y: scroll; width:100%;">
-                    <hierarchicallevel-components-component #firstElement
-                                                            [text]="'Alors, suivant, que vas-tu pouvoir bien faire aujourd\'hui ? ...'">
-                    </hierarchicallevel-components-component>
-                    <div #mainContainerAnchor></div>
-                    <hierarchicallevel-components-component #lastElement
-                                                            [text]="'Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"
-                                                            [display]="false">
-                    </hierarchicallevel-components-component>
+                    <hierarchicallevel-components-component
+                            [firstElementText]="'... Alors, suivant, que vas-tu pouvoir bien faire aujourd\'hui ? ...'"
+                            [lastElementText]="'... Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"></hierarchicallevel-components-component>
                 </div>
             </div>
         </div>
@@ -80,18 +75,3 @@
   }
   }
 </textarea>
-
-<!--<li draggable [dragScope]="'drink'" class="list-group-item">Coffee</li>-->
-<!--<li draggable [dragScope]="'drink'" class="list-group-item">Tea</li>-->
-<!--<li draggable [dragScope]="'meal'" class="list-group-item">Biryani</li>-->
-<!--<li draggable [dragScope]="'meal'" class="list-group-item">Kebab</li>-->
-
-<!--<div droppable [dropScope]="'drink'" [dragOverClass]="'drag-target-border'">-->
-<!--  <p>Only Drinks can be dropped in the above container</p>-->
-<!--</div>-->
-
-<!--<div droppable [dropScope]="['drink', 'meal']" [dragOverClass]="'drag-target-border'">-->
-<!--  <p>Both Meal and Drinks can be dropped in the above container</p>-->
-<!--</div>-->
-
-
