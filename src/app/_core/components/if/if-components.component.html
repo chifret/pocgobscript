@@ -1,0 +1,47 @@
+<p>
+    Si ...
+    <select>
+        <option value="trésor">Toi...</option>
+        <option value="saab">Moi, ton maître...</option>
+        <option value="mercedes">Le trésor...</option>
+        <option value="mercedes">Le monstre...</option>
+        <option value="mercedes">La plante...</option>
+        <option value="mercedes">Le gobelin...</option>
+        <option value="mercedes">Le lien...</option>
+    </select>,
+    <select>
+        <option value="trésor">ID...</option>
+        <option value="saab">PV...</option>
+        <option value="mercedes">Position...</option>
+    </select>
+    <select>
+        <option value="trésor">est égal à...</option>
+        <option value="saab">est inférieur à...</option>
+        <option value="mercedes">est supérieur à...</option>
+        <option value="mercedes">est compris entre...</option>
+        <option value="mercedes">est dans cette liste...</option>
+    </select>
+    <input type="text"/>
+</p>
+<div class="indent">
+    <hierarchicallevel-components-component #firstElementIf
+                                            [text]="'... Hum, tu fais quoi alors...'">
+    </hierarchicallevel-components-component>
+    <div #mainContainerIfAnchor></div>
+    <hierarchicallevel-components-component #lastElementIf
+                                            [text]="'... Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"
+                                            [display]="false">
+    </hierarchicallevel-components-component>
+</div>
+<p>Sinon ...</p>
+<div class="indent">
+    <hierarchicallevel-components-component #firstElementElse
+                                            [text]="'... Hum, tu fais quoi sinon...'">
+    </hierarchicallevel-components-component>
+    <div #mainContainerElseAnchor></div>
+    <hierarchicallevel-components-component #lastElementElse
+                                            [text]="'... Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"
+                                            [display]="false">
+    </hierarchicallevel-components-component>
+</div>
+<p>Et c'est tout !</p>

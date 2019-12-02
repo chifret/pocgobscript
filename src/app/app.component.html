@@ -1,21 +1,97 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Structurel</h2>
+                <ul class="list-group">
+                    <li #foreachBlock draggable="true" class="list-group-item">Pour chaque...</li>
+                    <li #ifBlock draggable="true" class="list-group-item">Si ... alors ... sinon ...</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>Général</h2>
+                <li #equipBlock draggable="true" class="list-group-item">Équipe...</li>
+                <li #followlock draggable class="disabled list-group-item">Suit...</li>
+                <li #moveBlock draggable class="disabled list-group-item">Va...</li>
+                <li #trainBlock draggable class="disabled list-group-item">Entraine...</li>
+            </div>
+            <div class="col-md-3">
+                <h2>Ramassage</h2>
+                <ul class="list-group">
+                    <li draggable class="disabled list-group-item">Ramasse...</li>
+                    <li draggable class="disabled list-group-item">Dépose...</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>Espionnage</h2>
+                <ul class="list-group">
+                    <li draggable class="disabled list-group-item">Espionne...</li>
+                </ul>
+                <h2>Combat</h2>
+                <ul class="list-group">
+                    <li draggable class="disabled list-group-item">Attaque...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<div class="container">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <div #mainContainer id="mainContainer" class="form-control"
+                     style="height:400px; overflow-y: scroll; width:100%;">
+                    <hierarchicallevel-components-component #firstElement
+                                                            [text]="'Alors, suivant, que vas-tu pouvoir bien faire aujourd\'hui ? ...'">
+                    </hierarchicallevel-components-component>
+                    <div #mainContainerAnchor></div>
+                    <hierarchicallevel-components-component #lastElement
+                                                            [text]="'Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"
+                                                            [display]="false">
+                    </hierarchicallevel-components-component>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<textarea id="outputContent" style="display:none;">
+  {
+    "glossary": {
+  "title": "example glossary",
+  "GlossDiv": {
+    "title": "S",
+  "GlossList": {
+  "GlossEntry": {
+    "ID": "SGML",
+  "SortAs": "SGML",
+  "GlossTerm": "Standard Generalized Markup Language",
+  "Acronym": "SGML",
+  "Abbrev": "ISO 8879:1986",
+  "GlossDef": {
+  "para": "A meta-markup language, used to create markup languages such as DocBook.",
+  "GlossSeeAlso": ["GML", "XML"]
+  },
+  "GlossSee": "markup"
+  }
+  }
+  }
+  }
+  }
+</textarea>
+
+<!--<li draggable [dragScope]="'drink'" class="list-group-item">Coffee</li>-->
+<!--<li draggable [dragScope]="'drink'" class="list-group-item">Tea</li>-->
+<!--<li draggable [dragScope]="'meal'" class="list-group-item">Biryani</li>-->
+<!--<li draggable [dragScope]="'meal'" class="list-group-item">Kebab</li>-->
+
+<!--<div droppable [dropScope]="'drink'" [dragOverClass]="'drag-target-border'">-->
+<!--  <p>Only Drinks can be dropped in the above container</p>-->
+<!--</div>-->
+
+<!--<div droppable [dropScope]="['drink', 'meal']" [dragOverClass]="'drag-target-border'">-->
+<!--  <p>Both Meal and Drinks can be dropped in the above container</p>-->
+<!--</div>-->
+
+

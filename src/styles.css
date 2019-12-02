@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+#mainContainer * {
+    margin-bottom: 0;
+}
+
+.indent{
+    margin-left:20px;
+    border-left:2px solid lightcoral;
+    padding-left: 5px;
+}
+
+.disabled{
+    background-color:#f9f9f9!important;
+}

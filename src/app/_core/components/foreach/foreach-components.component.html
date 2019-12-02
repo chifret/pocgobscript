@@ -1,0 +1,22 @@
+<p>
+    Pour chaque
+    <select>
+        <option value="trésor">Trésor</option>
+        <option value="saab">Monstre</option>
+        <option value="mercedes">Plante</option>
+        <option value="audi">Gobelin</option>
+        <option value="audi">Lieu</option>
+    </select>
+    dans ta vue, tu ...
+</p>
+<div class="indent">
+    <hierarchicallevel-components-component #firstElement
+                                            [text]="'... Hum, tu fais quoi à chaque fois ...'">
+    </hierarchicallevel-components-component>
+    <div #mainContainerAnchor></div>
+    <hierarchicallevel-components-component #lastElement
+                                            [text]="'... Et ensuite, que vas-tu pouvoir continuer à faire ? ...'"
+                                            [display]="false">
+    </hierarchicallevel-components-component>
+</div>
+<p>Et tu recommences !</p>
