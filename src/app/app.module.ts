@@ -7,7 +7,7 @@ import {ForeachComponentsComponent} from "./_core/components/foreach/foreach-com
 import {IfComponentsComponent} from "./_core/components/if/if-components.component";
 import {InstructionlevelComponentsComponent} from "./_core/components/instructionlevel/instructionlevel-components.component";
 import {EquipComponentsComponent} from "./_core/components/equip/equip-components.component";
-import {HierarchicallevelComponentsComponent} from "./_core/components/hierarchicallevel-components.component/hierarchicallevel-components.component";
+import {HierarchicallevelComponentsComponent} from "./_core/components/hierarchicallevel/hierarchicallevel-components.component";
 
 @NgModule({
     declarations: [
